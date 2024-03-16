@@ -19,9 +19,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/contacto', require('./routes/contact'));
 app.use('/app', require('./routes/app'));
+app.use('/', require('./routes/index'));
 app.use('/not-found', require('./routes/not-found'));
 app.use((req, res) => {
-  res.redirect('/not-found');
+  res.status(404).redirect('/not-found');
 })
 
 app.listen(app.get('port'), () => {
