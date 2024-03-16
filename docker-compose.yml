@@ -4,7 +4,7 @@ services:
   mysql:
     image: mysql:5
     environment:
-     - MYSQL_DATABASE=rifas247
+     - MYSQL_DATABASE=my_db
      - MYSQL_ROOT_PASSWORD=123456
     ports:
       - '5306:3306'
